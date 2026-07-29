@@ -200,7 +200,7 @@ My AIRS backend
 - [ ] `Jhoae/airs-backend`가 원본과 fork 관계를 유지한다.
 - [ ] `Jhoae/Jhoae.github.io`가 별도 공개 저장소로 존재한다.
 - [ ] 각 repository의 설명이 목적을 명확히 나타낸다.
-- [ ] 포트폴리오가 아직 미완성이라면 Pages 배포를 서두르지 않는다.
+- [ ] 사용자 사이트 repository 생성으로 Pages가 자동 활성화됐다면 검증되지 않은 본문 대신 준비 안내만 노출하는가?
 
 ---
 
@@ -1505,7 +1505,7 @@ TelemetryIngestionDispatcher
 - source: repository root
 - URL: `https://jhoae.github.io/`
 
-첫 공개는 콘텐츠와 링크 검수가 끝난 뒤 진행한다.
+GitHub 사용자 사이트 repository는 생성 직후 `main`의 README를 Pages로 자동 렌더링할 수 있다. 이 경우 준비 단계에서는 검증되지 않은 성과 대신 repository 목적과 작성 순서만 노출한다. 콘텐츠와 링크 검수가 끝난 뒤 root의 실제 정적 페이지로 교체한다.
 
 ### 17.2 공개 직전 확인
 
@@ -1516,6 +1516,7 @@ TelemetryIngestionDispatcher
 - [ ] 404가 없는가?
 - [ ] GitHub Pages 설정이 main/root인가?
 - [ ] HTTPS가 동작하는가?
+- [ ] 준비 안내에서 실제 포트폴리오로 교체됐는가?
 
 ### 17.3 공개 후 smoke test
 
