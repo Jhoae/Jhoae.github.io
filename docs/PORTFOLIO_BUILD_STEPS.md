@@ -150,6 +150,8 @@ Troubleshooting은 AIRS와 떨어져 존재하는 경력 항목이 아니다. AI
 - 원본 팀의 작업을 개인 단독 성과처럼 표현하지 않는다.
 - 개인 기여는 별도 포트폴리오에서 클래스·커밋·문서 근거로 구분한다.
 - 원본 repository의 license와 저작권 표시를 유지한다.
+- 원본에는 GitHub가 인식하는 license metadata가 없으므로 fork에 새 오픈소스 license를 임의로 추가하지 않는다.
+- public repository라는 사실을 자유로운 복제·재사용 허가와 같은 의미로 설명하지 않는다.
 - 저장소 보존을 이유로 팀 기록을 임의 수정하지 않는다.
 
 포트폴리오 링크 문구:
@@ -189,6 +191,7 @@ My AIRS backend
 - [ ] AIRS 원본이 공개 저장소인가?
 - [ ] 공개하면 안 되는 secret이 Git history에 없는가?
 - [ ] 원본 license를 확인했는가?
+- [ ] 원본에 license가 없다면 fork에도 임의로 추가하지 않았는가?
 - [ ] 포트폴리오 repository에 운영 비밀 정보가 없는가?
 - [ ] 두 저장소의 README가 역할을 혼동하지 않게 설명하는가?
 
