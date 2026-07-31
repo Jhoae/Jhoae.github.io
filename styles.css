@@ -29,7 +29,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
@@ -985,6 +985,42 @@ svg {
   font-size: 13px;
 }
 
+.case-context-figure {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.case-context-figure a {
+  display: block;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.case-context-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 200ms ease;
+}
+
+.case-context-figure a:hover img {
+  transform: scale(1.01);
+}
+
+.case-context-figure a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.case-context-figure figcaption {
+  padding: 14px 24px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--text-subtle);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
 .case-flow {
   margin: 0;
   padding: 10px 24px;
@@ -1257,6 +1293,10 @@ svg {
     padding: 8px 20px;
   }
 
+  .case-context-figure figcaption {
+    padding: 13px 20px 15px;
+  }
+
   .case-flow > div {
     grid-template-columns: 1fr;
     gap: 5px;
@@ -1371,6 +1411,11 @@ svg {
     justify-self: start;
     padding: 4px 8px;
     border-radius: 7px;
+  }
+
+  .case-context-figure figcaption {
+    padding-right: 18px;
+    padding-left: 18px;
   }
 
 }
