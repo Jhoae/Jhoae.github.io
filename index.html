@@ -114,6 +114,9 @@
           <p class="eyebrow">Backend Portfolio</p>
           <h1 id="hero-title">오재호</h1>
           <p class="hero-role">Backend Developer</p>
+          <a class="hero-email" href="mailto:ohjaehokor@gmail.com"
+            >ohjaehokor@gmail.com</a
+          >
           <p class="hero-intro">신입 백엔드 개발자 오재호입니다.</p>
           <div class="hero-actions">
             <a
@@ -131,9 +134,11 @@
             </a>
             <a
               class="button button-secondary"
-              href="https://childish-syringa-392.notion.site/3b3237ee7c7c8146907bc694f0cc9f1b"
+              href="assets/ohjaeho-backend-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              type="application/pdf"
+              aria-label="오재호 백엔드 이력서 PDF 새 탭에서 열기"
             >
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -141,17 +146,6 @@
                 />
               </svg>
               이력서
-            </a>
-            <a
-              class="button button-secondary"
-              href="mailto:ohjaehokor@gmail.com"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 7.2L19.2 7H4.8l7.2 5.2Zm0 2.45L4 8.88V17h16V8.88l-8 5.77Z"
-                />
-              </svg>
-              Email
             </a>
           </div>
         </div>
@@ -163,8 +157,8 @@
             <p class="section-label">Profile</p>
             <h2 id="about-title" class="visually-hidden">Profile</h2>
             <p>
-              AI를 구현 속도를 높이는 도구로 활용하되, 기술 선택의 근거와 결과의
-              검증은 직접 책임지는 백엔드 개발자를 지향합니다.
+              AI를 도구로서 활용하되, 기술 선택의 근거와 결과의 검증을 직접
+              책임지는 개발자를 지향합니다.
             </p>
           </div>
 
@@ -183,7 +177,7 @@
                     <strong>컴퓨터공학과 (복수전공)</strong>
                     <span>서강대학교</span>
                   </div>
-                  <time datetime="2027-03">2027.03 (예정)</time>
+                  <time datetime="2027-02">2027.02 (예정)</time>
                 </div>
                 <div class="fact-item">
                   <span class="fact-icon" aria-hidden="true">
@@ -233,9 +227,10 @@
               <h3>AIRS</h3>
               <p>
                 실내 온도·습도·CO₂ telemetry를 수집·분석해 공간의 현재 상태와
-                기간별 추이를 제공하는 IoT 기반 환경 관리 서비스입니다. Raspberry
-                Pi 기반 온프레미스 환경에서 Docker Compose로 백엔드 인프라를
-                구축하고, GitHub Actions 기반 CI/CD 배포를 운영했습니다.
+                기간별 추이를 제공하는 IoT 기반 환경 관리 서비스입니다.
+                Raspberry Pi 기반 온프레미스 환경에서 Docker Compose로 백엔드
+                인프라를 구축하고, GitHub Actions 기반 CI/CD 배포를
+                운영했습니다.
               </p>
               <div class="project-summary-bottom">
                 <ul class="chips" aria-label="대표 기술">
@@ -489,7 +484,6 @@
                             />
                             Spring Security · JWT
                           </li>
-                          <li class="tech-badge tech-eclipse">Eclipse Paho</li>
                           <li class="tech-badge tech-influx">
                             <img
                               class="tech-icon"
@@ -499,16 +493,6 @@
                               height="15"
                             />
                             Flux · InfluxDB Tasks
-                          </li>
-                          <li class="tech-badge tech-lua">
-                            <img
-                              class="tech-icon"
-                              src="https://cdn.simpleicons.org/lua/2C2D72"
-                              alt=""
-                              width="15"
-                              height="15"
-                            />
-                            Redis Lua
                           </li>
                           <li class="tech-badge tech-docker">
                             <img
@@ -546,36 +530,35 @@
                     <div class="contribution-grid">
                       <article>
                         <span>01</span>
-                        <h4>Backend &amp; Database</h4>
+                        <h4>API와 접근 제어</h4>
                         <p>
-                          OpenAPI 계약부터 Controller·Service·저장소 경계까지
-                          전체 API 흐름과 MySQL·InfluxDB 데이터 구조를
-                          설계했습니다.
+                          관리자 API와 JWT 인증, 사용자·캠퍼스 범위의 권한
+                          검사를 구현했습니다.
                         </p>
                       </article>
                       <article>
                         <span>02</span>
-                        <h4>Telemetry Ingestion</h4>
+                        <h4>센서 데이터 수집</h4>
                         <p>
-                          MQTT callback과 저장 책임을 분리하고, nodeId 기반
-                          striped worker·bounded queue로 수집 구조를 바꾸는
-                          작업을 팀과 함께 진행했습니다.
+                          MQTT 수신부터 노드별 순서 판정, 최신 상태 저장과
+                          InfluxDB 이력 전달까지의 수집 흐름을 설계했습니다.
                         </p>
                       </article>
                       <article>
                         <span>03</span>
-                        <h4>Time-series &amp; Cache</h4>
+                        <h4>시계열 조회</h4>
                         <p>
-                          기간별 raw·hourly·daily rollup 조회와 Redis 응답
-                          cache·single-flight를 직접 설계했습니다.
+                          기간별 사전 집계와 Redis 캐시를 적용해 장기 조회
+                          비용과 동시 요청의 중복 원본 조회를 줄였습니다.
                         </p>
                       </article>
                       <article>
                         <span>04</span>
-                        <h4>Application Delivery</h4>
+                        <h4>검증과 배포</h4>
                         <p>
-                          JWT·DB 기반 인가, Flyway·Testcontainers 검증, Docker
-                          Compose·GitHub Actions 배포 흐름을 담당했습니다.
+                          Flyway·Testcontainers로 DB 변경을 검증하고, Docker
+                          Compose 실행 환경과 GitHub Actions 배포 흐름을
+                          구축했습니다.
                         </p>
                       </article>
                     </div>
@@ -614,36 +597,35 @@
                       </figure>
                       <figure class="visual-card">
                         <a
-                          href="assets/airs-mysql-erd.webp"
+                          href="assets/airs-mysql-erd.webp?v=20260812"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
-                            src="assets/airs-mysql-erd.webp"
+                            src="assets/airs-mysql-erd.webp?v=20260812"
                             alt="AIRS MySQL 데이터베이스 ERD 확대 보기"
                             width="3343"
-                            height="1684"
+                            height="1716"
                             loading="lazy"
                             decoding="async"
                           />
                         </a>
                         <figcaption>
-                          node별 ingestion state는 순번·재실 계산의 이전 상태를,
-                          snapshot은 API가 읽는 최신 상태를, outbox는 수락된
-                          telemetry별 InfluxDB 전달 작업을 보관합니다.
+                          node별 ingestion state와 최신 snapshot, InfluxDB
+                          전달용 outbox를 포함한 MySQL 관계형 구조입니다.
                         </figcaption>
                       </figure>
                     </div>
                     <figure class="visual-card system-flow-figure">
                       <a
-                        href="assets/airs-mqtt-telemetry-processing-flow.webp"
+                        href="assets/airs-mqtt-telemetry-processing-flow.webp?v=20260813"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="AIRS MQTT telemetry 6단계 처리 흐름 크게 보기"
+                        aria-label="AIRS MQTT telemetry 전체 처리 흐름 크게 보기"
                       >
                         <img
-                          src="assets/airs-mqtt-telemetry-processing-flow.webp"
-                          alt="AIRS MQTT telemetry가 검증된 뒤 Dispatcher를 통해 node별 worker로 분배되고, 순서 판정과 재실 상태 계산, MySQL commit을 거쳐 ACK와 InfluxDB 전달로 나뉘는 6단계 처리 흐름"
+                          src="assets/airs-mqtt-telemetry-processing-flow.webp?v=20260813"
+                          alt="AIRS MQTT telemetry를 검증·분배하고 MySQL transaction에서 분류한 뒤 ACK와 outbox 기반 InfluxDB 전달로 나누는 전체 처리 흐름"
                           width="1672"
                           height="941"
                           loading="lazy"
@@ -651,17 +633,41 @@
                         />
                       </a>
                       <figcaption>
-                        MQTT telemetry를 검증·분배하고 순서와 상태를 MySQL
-                        transaction에서 확정한 뒤, QoS 1 ACK와 outbox 기반
-                        InfluxDB 전달로 분리한 현재 처리 흐름입니다.
+                        MQTT telemetry를 검증해 node별 순서로 처리하고, MySQL
+                        commit 뒤 ACK와 outbox 기반 InfluxDB 전달로 분리하는
+                        전체 흐름입니다.
+                      </figcaption>
+                    </figure>
+                    <figure class="visual-card system-flow-figure">
+                      <a
+                        href="assets/airs-telemetry-event-time-classification.webp?v=20260813"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="AIRS MQTT telemetry 판정·반영 기준 크게 보기"
+                      >
+                        <img
+                          src="assets/airs-telemetry-event-time-classification.webp?v=20260813"
+                          alt="AIRS MQTT telemetry를 CURRENT, LATE, DUPLICATE로 판정하고 ingestion state, snapshot, alert, outbox에 다르게 반영하는 기준"
+                          width="1672"
+                          height="941"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </a>
+                      <figcaption>
+                        event key와 node별 처리 상태를 기준으로
+                        CURRENT·LATE·DUPLICATE를 구분하고, 각 결과가 ingestion
+                        state·snapshot·alert·outbox에 반영되는 범위를
+                        정리했습니다.
                       </figcaption>
                     </figure>
                     <ol class="data-flow" aria-label="Telemetry 데이터 흐름">
                       <li>
                         <span>01</span><strong>수신·변환</strong
                         ><small
-                          >topic에서 nodeId를 분리하고 JSON payload를 검증해
-                          DTO로 변환합니다.</small
+                          >topic의 nodeId와 필수
+                          boot_id·sequence_no·observed_at을 검증하고, Spring
+                          수신 시각 received_at을 기록합니다.</small
                         >
                       </li>
                       <li>
@@ -672,33 +678,35 @@
                         >
                       </li>
                       <li>
-                        <span>03</span><strong>순서 판정</strong
+                        <span>03</span><strong>전달 판정</strong
                         ><small
-                          >node별 MySQL 상태 행의 row lock을 획득한 뒤
-                          boot_id·sequence_no로 중복·역전을 판정합니다.</small
+                          >node별 MySQL 상태 행의 row lock 안에서 event key와
+                          boot_id·sequence_no·observed_at을 비교해
+                          CURRENT·LATE·DUPLICATE로 분류합니다.</small
                         >
                       </li>
                       <li>
-                        <span>04</span><strong>재실 상태 계산</strong
+                        <span>04</span><strong>현재 상태 계산</strong
                         ><small
-                          >이전 PIR·마지막 움직임 상태와 현재 PIR·mmWave
-                          입력으로 재실 결과를 계산합니다.</small
+                          >CURRENT telemetry만 PIR·mmWave로 재실 상태와 실시간
+                          alert 입력을 계산하며, LATE는 이 단계를
+                          건너뜁니다.</small
                         >
                       </li>
                       <li>
                         <span>05</span><strong>상태·outbox 확정</strong
                         ><small
-                          >현재 telemetry로 node별 ingestion state와 최신
-                          snapshot을 갱신하고, event별 InfluxDB outbox를
-                          INSERT해 하나의 MySQL 트랜잭션에서 확정합니다.</small
+                          >CURRENT는 ingestion state·snapshot·outbox를, LATE는
+                          수신 시각·raw outbox만 MySQL 트랜잭션에서 확정하고,
+                          DUPLICATE는 수신 시각만 갱신합니다.</small
                         >
                       </li>
                       <li>
                         <span>06</span><strong>ACK·이력 전달</strong
                         ><small
                           >MySQL commit 뒤 MQTT ACK를 완료하고, outbox
-                          publisher가 확정된 데이터를 InfluxDB에
-                          전달합니다.</small
+                          publisher는 observed_at을 InfluxDB _time으로 사용해
+                          이력을 전달합니다.</small
                         >
                       </li>
                     </ol>
@@ -773,10 +781,10 @@
                                 </figcaption>
                               </figure>
                               <p>
-                                MQTT 메시지가 도착하면 Spring 수신 함수는 topic과
-                                payload를 검증한 뒤 Dispatcher에 작업을 넘깁니다.
-                                Dispatcher는 nodeId hash로 항상 같은 stripe의
-                                queue를 선택하고, 실제 처리는
+                                MQTT 메시지가 도착하면 Spring 수신 함수는
+                                topic과 payload를 검증한 뒤 Dispatcher에 작업을
+                                넘깁니다. Dispatcher는 nodeId hash로 항상 같은
+                                stripe의 queue를 선택하고, 실제 처리는
                                 <strong>8개 single-thread worker</strong>가
                                 맡도록 분리했습니다. 같은 node의 순서는
                                 유지하면서 서로 다른 stripe는 병렬로 처리하고,
@@ -795,23 +803,26 @@
                                   <dd>
                                     node 1,000개가 5초 간격으로 120초간 발행한
                                     24,000건을 기준으로, worker 수만
-                                    1·2·4·8·16개로 바꿔 비교했습니다. 8개부터 발행
-                                    종료 뒤 남은 작업이 약 2초 안에 모두
-                                    처리됐습니다. 16개는 MQTT 수신 경로의 지연은 더
-                                    줄였지만 InfluxDB 반영 완료는 더 빨라지지 않아,
-                                    worker와 queue를 불필요하게 늘리지 않는 8개를
-                                    선택했습니다.
+                                    1·2·4·8·16개로 바꿔 비교했습니다. 8개부터
+                                    발행 종료 뒤 남은 작업이 약 2초 안에 모두
+                                    처리됐습니다. 16개는 MQTT 수신 경로의 지연은
+                                    더 줄였지만 InfluxDB 반영 완료는 더 빨라지지
+                                    않아, worker와 queue를 불필요하게 늘리지
+                                    않는 8개를 선택했습니다.
                                   </dd>
                                 </div>
                                 <div>
-                                  <dt>single-thread stripe 구조에서 수용한 비용</dt>
+                                  <dt>
+                                    single-thread stripe 구조에서 수용한 비용
+                                  </dt>
                                   <dd>
                                     같은 stripe에 배정된 여러 node는 하나의
-                                    single-thread worker를 공유하므로 앞선 node의
-                                    처리를 기다릴 수 있습니다. 해당 stripe의 queue가
-                                    가득 차면 Spring MQTT 수신 함수도 빈자리를
-                                    기다려야 하므로, broker에 미처리 메시지가 쌓이고
-                                    이후 메시지 수신이 늦어질 수 있습니다.
+                                    single-thread worker를 공유하므로 앞선
+                                    node의 처리를 기다릴 수 있습니다. 해당
+                                    stripe의 queue가 가득 차면 Spring MQTT 수신
+                                    함수도 빈자리를 기다려야 하므로, broker에
+                                    미처리 메시지가 쌓이고 이후 메시지 수신이
+                                    늦어질 수 있습니다.
                                   </dd>
                                 </div>
                               </dl>
@@ -1005,13 +1016,12 @@
                           <span class="case-number">04</span>
                           <div>
                             <h4>
-                              중복·순서 역전 telemetry를 MySQL transaction에서
-                              차단
+                              중복과 늦게 도착한 telemetry를 event time으로 분리
                             </h4>
                             <p>
-                              중복·순서 판정과 실제 저장의 원자성을 위해, 장치의
-                              부팅 세션·순번과 최신 상태·outbox를 하나의 MySQL
-                              트랜잭션에서 확정했습니다.
+                              실제 측정 시각을 기준으로 최신 상태와 과거 이력을
+                              분리해, 늦은 측정값은 보존하면서도 현재 상태는
+                              되돌리지 않았습니다.
                             </p>
                           </div>
                         </div>
@@ -1019,24 +1029,24 @@
                           <div>
                             <dt>문제</dt>
                             <dd>
-                              QoS 1 (최소 한 번 전달) 재전송이나 늦게 도착한
-                              메시지를 그대로 처리하면 InfluxDB에 같은 이력이
-                              중복 저장될 수 있었습니다. MySQL의 최신 상태와
-                              재실 판정도 과거 데이터로 바뀔 수 있었습니다.
+                              기존에는 최신 순번보다 작은 telemetry를
+                              OUT_OF_ORDER로 차단해 snapshot 역전은 막았지만,
+                              고유한 과거 측정값도 InfluxDB raw 이력에서
+                              사라졌습니다. 또한 서버 수신 시각을 시계열의
+                              기준으로 사용해 실제 측정 순서와 그래프의 시간이
+                              달라질 수 있었습니다.
                             </dd>
                           </div>
                           <div>
                             <dt>원인</dt>
                             <dd>
-                              <code>sequence_no</code>는 한 번의 부팅 세션
-                              안에서만 증가하고 장치 재부팅 뒤에는 0부터 다시
-                              시작합니다. 그래서 기존 구현은 node와
-                              <code>boot_id</code>별 최대
-                              <code>sequence_no</code>를 Redis에서
-                              비교·갱신했습니다. 하지만 이 Redis 갱신이
-                              MySQL·InfluxDB 저장보다 먼저 완료돼, Redis만
-                              성공하고 DB 저장이 실패하면 같은 메시지의 재전송을
-                              이미 처리한 중복으로 차단하는 문제가 발생했습니다.
+                              <code>sequence_no</code>는 한 부팅 세션의 전달
+                              순서는 알려주지만 측정 시각은 설명하지 못합니다.
+                              마지막 순번만 비교해서는 처음 늦게 도착한 이벤트와
+                              같은 이벤트의 재전송도 구분할 수 없었습니다. 이전
+                              Redis 순번 선갱신은 DB transaction이 실패해도
+                              처리됐다고 남을 수 있어, 중복 판정과 실제 저장의
+                              원자성도 보장하지 못했습니다.
                             </dd>
                           </div>
                           <div>
@@ -1044,54 +1054,55 @@
                             <dd>
                               <figure class="case-context-figure">
                                 <a
-                                  href="assets/airs-telemetry-sequence-deduplication.webp"
+                                  href="assets/airs-telemetry-event-time-classification.webp"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   aria-label="AIRS telemetry 중복·순서 역전 판정 구조 크게 보기"
                                 >
                                   <img
-                                    src="assets/airs-telemetry-sequence-deduplication.webp"
-                                    alt="Redis 순번 선갱신 구조와 node별 MySQL 상태 행의 row lock으로 중복·순서 역전을 판정하는 구조 비교"
-                                    width="1672"
+                                    src="assets/airs-telemetry-event-time-classification.webp"
+                                    alt="Redis 순번 선갱신 구조와 MySQL transaction에서 current, late, duplicate telemetry를 event time으로 분류하는 구조 비교"
+                                    width="1671"
                                     height="941"
                                     loading="lazy"
                                     decoding="async"
                                   />
                                 </a>
                                 <figcaption>
-                                  Redis에서 순번을 먼저 갱신하던 구조를 node별
-                                  MySQL 상태 행을 잠그는 방식으로 변경했습니다.
-                                  수락한 메시지만 순번·재실 상태와 최신 snapshot,
-                                  InfluxDB 전달 작업을 하나의 트랜잭션에서
-                                  확정합니다.
+                                  42→44→43으로 도착해도 43은 늦은 raw 이력으로
+                                  보존하고, 최신 snapshot은 44를 유지합니다.
+                                  같은 43의 재전송은 event key로 구분합니다.
                                 </figcaption>
                               </figure>
-                              node별
-                              <code>telemetry_ingestion_states</code> 행을 row
-                              lock으로 읽고
-                              <code>boot_id</code>·<code>sequence_no</code>를
-                              비교했습니다. 이 테이블에는 마지막으로 반영한
-                              순번과 재실 계산 상태를, snapshot 테이블에는 API가
-                              읽을 최신 상태를,
-                              <code>telemetry_outbox</code>에는 InfluxDB로 보낼
-                              이력 작업을 저장했습니다. 최초·새 부팅 세션·증가
-                              순번만 세 저장을 같은 MySQL 트랜잭션에서 확정하고,
-                              같은·작은 순번은 모두 변경하지 않았습니다. outbox
-                              재시도는 snapshot을 다시 갱신하지 않도록 책임을
-                              분리했습니다.
+                              MQTT 계약에서
+                              <code>boot_id</code
+                              >·<code>sequence_no</code>·<code>observed_at</code>을
+                              필수로 받고, Spring은 별도로
+                              <code>received_at</code>을 기록합니다. node별
+                              <code>telemetry_ingestion_states</code> 행을 잠근
+                              transaction 안에서 event key와 시각을 비교해
+                              CURRENT·LATE·DUPLICATE로 분류했습니다. CURRENT만
+                              재실·alert를 계산하고 ingestion state와 snapshot을
+                              갱신하며, 고유한 LATE는 현재 상태를 건드리지 않고
+                              raw outbox만 남깁니다. DUPLICATE는 raw·snapshot을
+                              추가하지 않고 마지막 수신 시각만 갱신하며,
+                              InfluxDB의 <code>_time</code>에는
+                              <code>observed_at</code>을 사용했습니다.
                             </dd>
                           </div>
                           <div>
                             <dt>결과</dt>
                             <dd>
-                              통합 테스트에서 최초·증가 순번만 반영되고
-                              같은·작은 순번은 snapshot·재실 상태·outbox를
-                              변경하지 않는 것을 확인했습니다.
-                              <code>40 → 42 → 41</code> 순서에서도 41이 최신
-                              상태를 덮지 않았습니다. <code>boot_id</code>나
-                              <code>sequence_no</code>가 없는 구형 payload는
-                              센서값 저장은 유지하되 중복·순서 차단 보장은
-                              적용하지 않았습니다.
+                              테스트에서 42→44→43 순서의 고유 telemetry 세 건이
+                              모두 raw outbox에 남고, 43은 LATE로 처리돼 최신
+                              ingestion state·snapshot·재실 상태가 44에서
+                              유지됨을 확인했습니다. 같은 43을 다시 보내도
+                              outbox가 늘지 않았고, InfluxDB writer는
+                              <code>observed_at</code>을 point 시각으로
+                              사용했습니다. 다만 실제 펌웨어·운영 broker·실제
+                              InfluxDB 적재까지 검증한 결과는 아니며, 완료
+                              outbox 보관 기간이 지난 중복과 늦은 raw의 기존
+                              rollup 재반영 정책은 남은 한계입니다.
                             </dd>
                           </div>
                         </dl>
@@ -1103,9 +1114,9 @@
                           <div>
                             <h4>MQTT ACK와 저장 사이의 유실 경계 보완</h4>
                             <p>
-                              MySQL에 최신 상태와 InfluxDB 전달 작업을 먼저 확정한
-                              뒤 broker에 ACK하고, 실패한 이력 전달은 outbox에서
-                              이어서 처리했습니다.
+                              MySQL에 최신 상태와 InfluxDB 전달 작업을 먼저
+                              확정한 뒤 broker에 ACK하고, 실패한 이력 전달은
+                              outbox에서 이어서 처리했습니다.
                             </p>
                           </div>
                         </div>
@@ -1126,13 +1137,13 @@
                           <div>
                             <dt>원인</dt>
                             <dd>
-                              MQTT ACK는 broker에게 메시지 전달이 끝났다고 알리는
-                              신호인데, 기존에는 실제 저장 결과가 아니라 Spring
-                              수신 함수의 반환을 기준으로 전송됐습니다. Redis의
-                              순번도 DB 저장 전에 갱신됐고, 비동기 InfluxDB 저장은
-                              작업을 메모리 buffer에 넘긴 시점에 호출이 끝나 실제
-                              적재 성공과 재시작 후 미처리 작업을 확인할 수
-                              없었습니다.
+                              MQTT ACK는 broker에게 메시지 전달이 끝났다고
+                              알리는 신호인데, 기존에는 실제 저장 결과가 아니라
+                              Spring 수신 함수의 반환을 기준으로 전송됐습니다.
+                              Redis의 순번도 DB 저장 전에 갱신됐고, 비동기
+                              InfluxDB 저장은 작업을 메모리 buffer에 넘긴 시점에
+                              호출이 끝나 실제 적재 성공과 재시작 후 미처리
+                              작업을 확인할 수 없었습니다.
                             </dd>
                           </div>
                           <div>
@@ -1166,20 +1177,21 @@
                                 메모리에서만 재시도하면 Spring이 재시작될 때
                                 작업이 사라지고, telemetry 전체를 다시 처리하면
                                 과거 메시지가 최신 snapshot과 재실 상태를 다시
-                                계산할 위험이 있었습니다. 그래서 node별 순번·재실
-                                상태, 최신 snapshot과 InfluxDB 전달용 outbox를
-                                하나의 MySQL 트랜잭션에서 확정한 뒤 ACK하도록
-                                변경했습니다.
+                                계산할 위험이 있었습니다. 그래서 node별
+                                순번·재실 상태, 최신 snapshot과 InfluxDB 전달용
+                                outbox를 하나의 MySQL 트랜잭션에서 확정한 뒤
+                                ACK하도록 변경했습니다.
                               </p>
                               <p>
-                                outbox는 수락한 telemetry마다 InfluxDB에 보낼
-                                데이터와 전달 상태를 보관하는 MySQL 테이블입니다.
-                                Spring의 별도 전달 작업은 저장되지 않은 이력만
-                                다시 보내며 snapshot과 재실 상태는 다시 계산하지
-                                않습니다. 두 DB의 반영 시점이 잠시 달라지고
-                                telemetry마다 MySQL 저장과 완료 데이터 정리 비용이
-                                추가되지만, 재시작 복구와 최신 상태 역전을 함께
-                                막는 쪽을 선택했습니다.
+                                outbox는 CURRENT와 고유한 LATE telemetry의
+                                InfluxDB 전달 데이터·상태를 보관하는 MySQL
+                                테이블입니다. Spring의 별도 전달 작업은 저장되지
+                                않은 raw 이력만 다시 보내며 snapshot과 재실
+                                상태는 다시 계산하지 않습니다. 두 DB의 반영
+                                시점이 잠시 달라지고 telemetry마다 MySQL 저장과
+                                완료 데이터 정리 비용이 추가되지만, 재시작
+                                복구와 최신 상태 역전을 함께 막는 쪽을
+                                선택했습니다.
                               </p>
                             </dd>
                           </div>
@@ -1193,10 +1205,20 @@
                                 저장되지 않았습니다. InfluxDB를 중단했을 때도
                                 미전달 작업이 MySQL에 남아 Spring과 InfluxDB를
                                 재시작한 뒤 처리를 완료했습니다. 노드 1,000개가
-                                발행한 <strong>24,000건이 outbox와 InfluxDB에 모두
-                                반영</strong>됐고, 순번 누락·영구 실패와 미처리
-                                작업이 정리 과정에서 삭제되는 문제는 발생하지
-                                않았습니다.
+                                발행한
+                                <strong
+                                  >24,000건이 outbox와 InfluxDB에 모두
+                                  반영</strong
+                                >됐고, 순번 누락·영구 실패와 미처리 작업이 정리
+                                과정에서 삭제되는 문제는 발생하지 않았습니다.
+                              </p>
+                              <p>
+                                이 수치는 기존 전달 신뢰성 staging의 검증
+                                결과입니다. <code>observed_at</code> 기반
+                                CURRENT·LATE·DUPLICATE 분기는 단위·통합 테스트와
+                                가상 subscriber 흐름으로 확인했으며, 실제
+                                펌웨어·운영 broker에 배포해 얻은 수치로 확대해
+                                표현하지 않았습니다.
                               </p>
                               <dl
                                 class="case-decision delivery-boundary-comparison"
@@ -1206,31 +1228,40 @@
                                   <dt>변경 전</dt>
                                   <dd>
                                     <div class="delivery-boundary-variants">
-                                      <section class="delivery-boundary-variant">
+                                      <section
+                                        class="delivery-boundary-variant"
+                                      >
                                         <p class="delivery-boundary-label">
                                           (1) 기존 ACK 선행 구조
                                         </p>
-                                        <pre class="delivery-boundary-diagram">                        ┌→ MQTT ACK
+                                        <pre class="delivery-boundary-diagram">
+                        ┌→ MQTT ACK
 Memory queue 등록 ──────┤
                         └→ stripe worker
 
 stripe worker
-MySQL snapshot → InfluxDB async write</pre>
+MySQL snapshot → InfluxDB async write</pre
+                                        >
                                         <p class="delivery-boundary-risk">
                                           ACK 뒤 저장 전 유실 가능 구간
                                         </p>
                                       </section>
-                                      <section class="delivery-boundary-variant">
+                                      <section
+                                        class="delivery-boundary-variant"
+                                      >
                                         <p class="delivery-boundary-label">
                                           (2) 검토한 동기 저장 대안
                                         </p>
-                                        <pre class="delivery-boundary-diagram">MySQL COMMIT
+                                        <pre class="delivery-boundary-diagram">
+MySQL COMMIT
       ↓
 InfluxDB blocking write
       ↓
-둘 다 성공하면 MQTT ACK</pre>
+둘 다 성공하면 MQTT ACK</pre
+                                        >
                                         <p class="delivery-boundary-risk">
-                                          InfluxDB 지연·장애가 ACK와 다음 수신까지 차단
+                                          InfluxDB 지연·장애가 ACK와 다음
+                                          수신까지 차단
                                         </p>
                                       </section>
                                     </div>
@@ -1240,12 +1271,14 @@ InfluxDB blocking write
                                   <dt>변경 후</dt>
                                   <dd>
                                     <div class="delivery-boundary-after">
-                                      <pre class="delivery-boundary-diagram">                    ┌→ MQTT ACK
+                                      <pre class="delivery-boundary-diagram">
+                    ┌→ MQTT ACK
 MySQL COMMIT ───────┤
                     └→ outbox에 전달 작업 보존
 
 별도 publisher
-outbox → InfluxDB blocking write</pre>
+outbox → InfluxDB blocking write</pre
+                                      >
                                       <ul class="delivery-boundary-benefits">
                                         <li>ACK 전 MySQL 영속화</li>
                                         <li>MySQL·InfluxDB 장애 경계 분리</li>
@@ -1259,57 +1292,6 @@ outbox → InfluxDB blocking write</pre>
                             </dd>
                           </div>
                         </dl>
-                      </article>
-                    </div>
-                  </section>
-
-                  <section
-                    class="detail-section"
-                    aria-labelledby="engineering-title"
-                  >
-                    <div class="detail-heading">
-                      <p class="detail-kicker">Backend Engineering</p>
-                      <h3 id="engineering-title">백엔드 품질을 연결한 작업</h3>
-                    </div>
-                    <div class="engineering-grid">
-                      <article>
-                        <h4>데이터 저장 경계</h4>
-                        <p>
-                          <strong>MySQL</strong>은 관계형 데이터와 최신
-                          snapshot, node별 수집 상태·InfluxDB outbox를
-                          관리합니다. <strong>InfluxDB</strong>는 raw
-                          telemetry와 rollup, <strong>Redis</strong>는 시계열
-                          응답 cache와 동일 cold miss의 single-flight lock을
-                          맡겼습니다.
-                        </p>
-                      </article>
-                      <article>
-                        <h4>인증과 인가</h4>
-                        <p>
-                          JWT로 사용자를 식별하고, 실제 접근은 DB의
-                          ROOT_ADMIN·ADMIN·USER 역할, 관리자 승인 상태와 캠퍼스
-                          범위를 요청마다 확인했습니다.
-                        </p>
-                      </article>
-                      <article>
-                        <h4>스키마와 배포</h4>
-                        <p>
-                          Spring Boot를 멀티스테이지 Dockerfile로 이미지화하고,
-                          Raspberry Pi에서
-                          MySQL·InfluxDB·Redis·Mosquitto·Caddy와 Docker
-                          Compose로 실행했습니다. GitHub Actions는 테스트 통과
-                          후 배포 서버에서 Spring 이미지를 다시 빌드하고 health
-                          check로 기동을 확인합니다.
-                        </p>
-                      </article>
-                      <article>
-                        <h4>배포 경로 확인</h4>
-                        <p>
-                          Raspberry Pi의 공개 HTTPS 경로에서 인증·인가를 포함한
-                          혼합 읽기 요청을 30분간 실행했습니다. 총 9,001건에서
-                          실패와 dropped iteration은 없었고 P95는
-                          314.64ms였습니다.
-                        </p>
                       </article>
                     </div>
                   </section>

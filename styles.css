@@ -288,6 +288,19 @@ svg {
   letter-spacing: -0.035em;
 }
 
+.hero-email {
+  display: inline-block;
+  margin-top: 7px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 160ms ease;
+}
+
+.hero-email:hover {
+  color: var(--text);
+}
+
 .hero-intro {
   margin: 24px 0 0;
   color: var(--text-subtle);
