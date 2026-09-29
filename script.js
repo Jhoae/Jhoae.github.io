@@ -6,6 +6,8 @@ const mobileNav = document.querySelector("[data-mobile-nav]");
 const projectToggle = document.querySelector("[data-project-toggle]");
 const projectCollapse = document.querySelector("[data-project-collapse]");
 const projectDetails = document.querySelector("[data-project-details]");
+const toyToggle = document.querySelector("[data-toy-toggle]");
+const toyProjectList = document.querySelector("#toy-project-list");
 const githubChart = document.querySelector("[data-github-chart]");
 const githubFallback = document.querySelector("[data-github-fallback]");
 const techIcons = document.querySelectorAll(".tech-icon");
@@ -100,6 +102,23 @@ projectToggle?.addEventListener("click", () => {
 projectCollapse?.addEventListener("click", () => setProjectDetails(false, "bottom"));
 
 setProjectDetails(false);
+
+function setToyProjects(open) {
+  if (!toyToggle || !toyProjectList) {
+    return;
+  }
+
+  toyProjectList.hidden = !open;
+  toyToggle.setAttribute("aria-expanded", String(open));
+  toyToggle.querySelector("[data-toggle-label]").textContent =
+    open ? "상세 내용 접기" : "상세 내용 펼치기";
+}
+
+toyToggle?.addEventListener("click", () => {
+  setToyProjects(toyToggle.getAttribute("aria-expanded") !== "true");
+});
+
+setToyProjects(false);
 
 techIcons.forEach((icon) => {
   const hideUnavailableIcon = () => {

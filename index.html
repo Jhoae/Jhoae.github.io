@@ -20,11 +20,11 @@
     />
     <meta
       property="og:image"
-      content="https://jhoae.github.io/assets/og-image.png?v=20260730-1"
+      content="https://jhoae.github.io/assets/1_Backend%20Portfolio/og-image.png?v=20260730-1"
     />
     <meta
       property="og:image:secure_url"
-      content="https://jhoae.github.io/assets/og-image.png?v=20260730-1"
+      content="https://jhoae.github.io/assets/1_Backend%20Portfolio/og-image.png?v=20260730-1"
     />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
@@ -41,15 +41,15 @@
     />
     <meta
       name="twitter:image"
-      content="https://jhoae.github.io/assets/og-image.png?v=20260730-1"
+      content="https://jhoae.github.io/assets/1_Backend%20Portfolio/og-image.png?v=20260730-1"
     />
     <meta
       name="twitter:image:alt"
       content="오재호 백엔드 개발자 포트폴리오 소개"
     />
     <title>오재호 | Backend Developer</title>
-    <link rel="stylesheet" href="styles.css?v=20260928-3" />
-    <script src="script.js?v=20260928-2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260929-6" />
+    <script src="script.js?v=20260929-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문으로 바로가기</a>
@@ -63,8 +63,9 @@
           data-mobile-nav
         >
           <a href="#about">Profile</a>
-          <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#projects">Side Project</a>
+          <a href="#toy-projects">Toy Project</a>
           <a href="#skills">Skills</a>
         </nav>
 
@@ -135,7 +136,7 @@
             </a>
             <a
               class="button button-secondary"
-              href="assets/ohjaeho-backend-resume.pdf"
+              href="assets/1_Backend%20Portfolio/ohjaeho-backend-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               type="application/pdf"
@@ -166,7 +167,7 @@
           <div class="profile-facts">
             <div class="fact-group">
               <div class="fact-list">
-                <div class="fact-item">
+                <div class="fact-item fact-item--education">
                   <span class="fact-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24">
                       <path d="m3 9 9-4 9 4-9 4-9-4Z" />
@@ -175,10 +176,12 @@
                     </svg>
                   </span>
                   <div>
-                    <strong>컴퓨터공학과 (복수전공)</strong>
-                    <span>서강대학교</span>
+                    <strong>유럽문화과<br />컴퓨터공학과(복수전공)</strong>
                   </div>
-                  <time datetime="2027-02">2027.02 (예정)</time>
+                  <div class="fact-meta">
+                    <span>서강대학교</span>
+                    <time datetime="2027-02">2027.02 (졸업예정)</time>
+                  </div>
                 </div>
                 <div class="fact-item">
                   <span class="fact-icon" aria-hidden="true">
@@ -193,9 +196,100 @@
                   </div>
                   <time datetime="2026-03">2026.03</time>
                 </div>
+                <div class="fact-item fact-item--language">
+                  <span class="fact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M6 3h12v18l-6-3-6 3V3Z" />
+                      <path d="M9 8h6" />
+                      <path d="M9 12h6" />
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Delf B1</strong>
+                    <span>프랑스어 공인 자격증</span>
+                  </div>
+                  <time datetime="2025-05">2025.05</time>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        class="section experience-section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="content-shell">
+          <p class="section-label">Experience</p>
+          <h2 id="experience-title" class="visually-hidden">Experience</h2>
+          <ul class="experience-list" role="list">
+            <li class="experience-row">
+              <div class="experience-period">
+                <time datetime="2026-03">2026.03</time>–<time datetime="2026-12"
+                  >2026.12</time
+                >
+              </div>
+              <article
+                class="experience-content"
+                aria-labelledby="release-title"
+              >
+                <p class="experience-category">교내 프로젝트 학회</p>
+                <h3 id="release-title">Release</h3>
+                <p class="experience-affiliation">서강대학교 프로젝트 학회</p>
+                <p class="experience-description">
+                  팀 프로젝트에 관심 있는 학우들과 교류하기 위해 활동했습니다.
+                  학회원들과 스터디를 하며 CS와 전공 공부를 함께했고, 팀
+                  프로젝트에서는 모바일·하드웨어 등 서로 다른 파트의 팀원들과
+                  하나의 서비스를 만들었습니다.
+                </p>
+              </article>
+            </li>
+            <li class="experience-row">
+              <div class="experience-period">
+                <time datetime="2022-09">2022.09</time>–<time datetime="2022-11"
+                  >2022.11</time
+                >
+              </div>
+              <article
+                class="experience-content"
+                aria-labelledby="timetable-title"
+              >
+                <p class="experience-category">교외 프로젝트 팀</p>
+                <h3 id="timetable-title">TimetableHelper — 시간표 도우미</h3>
+                <p class="experience-affiliation">홍익대학교 졸업 프로젝트</p>
+                <p class="experience-description">
+                  외부 개발 팀원으로 참여해 Figma 디자인을 바탕으로 웹 화면
+                  개발을 전담했습니다. 강의 선택과 시간표 편집 기능을 구현하고,
+                  시간표 이미지를 공유하며 ‘좋아요’를 누를 수 있는 커뮤니티
+                  화면도 개발했습니다. 완성한 결과물은 졸업 발표에서
+                  소개되었습니다.
+                </p>
+              </article>
+            </li>
+            <li class="experience-row">
+              <div class="experience-period">
+                <time datetime="2022-06">2022.06</time>–<time datetime="2022-09"
+                  >2022.09</time
+                >
+              </div>
+              <article class="experience-content" aria-labelledby="kcook-title">
+                <p class="experience-category">학생 창업팀</p>
+                <h3 id="kcook-title">K.Cook — 커스텀 케이크 주문 플랫폼</h3>
+                <p class="experience-affiliation">
+                  숭실대학교 학생 창업팀 K.Cook
+                </p>
+                <p class="experience-description">
+                  숭실대학교 학생 창업팀 K.Cook의 커스텀 케이크 주문 플랫폼
+                  개발에 프론트엔드로 참여했습니다. 사용자가 가게를 찾는 화면과
+                  판매자가 케이크 이미지·옵션을 다루는 화면을 맡았습니다.
+                  구매자와 판매자 양쪽의 화면을 구현하며, 서로 다른 이용 목적에
+                  맞춰 화면을 구성하는 경험을 했습니다.
+                </p>
+              </article>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -205,13 +299,18 @@
         aria-labelledby="projects-title"
       >
         <div class="content-shell">
-          <p class="section-label">Projects</p>
-          <h2 id="projects-title" class="visually-hidden">Projects</h2>
+          <div class="section-heading-copy">
+            <p class="section-label">Side Project</p>
+            <p class="section-note">
+              - 서비스를 설계하고 개발한 개인·팀 프로젝트입니다.
+            </p>
+          </div>
+          <h2 id="projects-title" class="visually-hidden">Side Project</h2>
 
           <article class="project-card" id="airs-project">
             <div class="project-cover project-logo-cover">
               <img
-                src="assets/airs-logo.png"
+                src="assets/4_Side%20Project/AIRS/airs-logo.png"
                 alt="AIRS 로고"
                 width="200"
                 height="200"
@@ -562,6 +661,15 @@
                           구축했습니다.
                         </p>
                       </article>
+                      <article class="contribution-wide">
+                        <span>05</span>
+                        <h4>팀 회의 준비</h4>
+                        <p>
+                          기술 내용을 정리하고, 팀원들이 데이터 흐름을 따라가며
+                          의견을 나눌 수 있도록 그림과 HTML 시연으로 설명 방식을
+                          다듬었습니다.
+                        </p>
+                      </article>
                     </div>
                   </section>
 
@@ -598,12 +706,12 @@
                       </figure>
                       <figure class="visual-card">
                         <a
-                          href="assets/airs-mysql-erd.webp?v=20260812"
+                          href="assets/4_Side%20Project/AIRS/airs-mysql-erd.webp?v=20260812"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <img
-                            src="assets/airs-mysql-erd.webp?v=20260812"
+                            src="assets/4_Side%20Project/AIRS/airs-mysql-erd.webp?v=20260812"
                             alt="AIRS MySQL 데이터베이스 ERD 확대 보기"
                             width="3343"
                             height="1716"
@@ -619,13 +727,13 @@
                     </div>
                     <figure class="visual-card system-flow-figure">
                       <a
-                        href="assets/airs-mqtt-telemetry-processing-flow.webp?v=20260813"
+                        href="assets/4_Side%20Project/AIRS/airs-mqtt-telemetry-processing-flow.webp?v=20260813"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="AIRS MQTT telemetry 전체 처리 흐름 크게 보기"
                       >
                         <img
-                          src="assets/airs-mqtt-telemetry-processing-flow.webp?v=20260813"
+                          src="assets/4_Side%20Project/AIRS/airs-mqtt-telemetry-processing-flow.webp?v=20260813"
                           alt="AIRS MQTT telemetry를 검증·분배하고 MySQL transaction에서 분류한 뒤 ACK와 outbox 기반 InfluxDB 전달로 나누는 전체 처리 흐름"
                           width="1672"
                           height="941"
@@ -641,13 +749,13 @@
                     </figure>
                     <figure class="visual-card system-flow-figure">
                       <a
-                        href="assets/airs-telemetry-event-time-classification.webp?v=20260813"
+                        href="assets/4_Side%20Project/AIRS/airs-telemetry-event-time-classification.webp?v=20260813"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="AIRS MQTT telemetry 판정·반영 기준 크게 보기"
                       >
                         <img
-                          src="assets/airs-telemetry-event-time-classification.webp?v=20260813"
+                          src="assets/4_Side%20Project/AIRS/airs-telemetry-event-time-classification.webp?v=20260813"
                           alt="AIRS MQTT telemetry를 CURRENT, LATE, DUPLICATE로 판정하고 ingestion state, snapshot, alert, outbox에 다르게 반영하는 기준"
                           width="1672"
                           height="941"
@@ -761,13 +869,13 @@
                             <dd>
                               <figure class="case-context-figure">
                                 <a
-                                  href="assets/airs-striped-worker-flow.webp"
+                                  href="assets/4_Side%20Project/AIRS/airs-striped-worker-flow.webp"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   aria-label="AIRS 8개 striped worker 처리 구조 크게 보기"
                                 >
                                   <img
-                                    src="assets/airs-striped-worker-flow.webp"
+                                    src="assets/4_Side%20Project/AIRS/airs-striped-worker-flow.webp"
                                     alt="AIRS MQTT telemetry를 node ID로 8개 stripe 중 하나에 배정해 같은 node는 순서대로, 서로 다른 stripe는 병렬로 처리하는 구조"
                                     width="1672"
                                     height="941"
@@ -855,13 +963,13 @@
                         </div>
                         <figure class="case-context-figure">
                           <a
-                            href="assets/airs-co2-rollup-trend.webp"
+                            href="assets/4_Side%20Project/AIRS/airs-co2-rollup-trend.webp"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="AIRS 시간대별 CO₂ 평균 추이 그래프 크게 보기"
                           >
                             <img
-                              src="assets/airs-co2-rollup-trend.webp"
+                              src="assets/4_Side%20Project/AIRS/airs-co2-rollup-trend.webp"
                               alt="AIRS 환기·CO₂ 분석 화면의 시간대별 CO₂ 평균 추이 그래프"
                               width="1214"
                               height="414"
@@ -938,13 +1046,13 @@
                         </div>
                         <figure class="case-context-figure">
                           <a
-                            href="assets/airs-sensor-trend-cache.webp"
+                            href="assets/4_Side%20Project/AIRS/airs-sensor-trend-cache.webp"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="AIRS 노드별 센서 추이 그래프 크게 보기"
                           >
                             <img
-                              src="assets/airs-sensor-trend-cache.webp"
+                              src="assets/4_Side%20Project/AIRS/airs-sensor-trend-cache.webp"
                               alt="AIRS 노드 상세 화면의 센서 지표와 조회 기간별 CO₂ 추이 그래프"
                               width="1208"
                               height="645"
@@ -1016,103 +1124,6 @@
                         <div class="case-header">
                           <span class="case-number">04</span>
                           <div>
-                            <h4>
-                              중복과 늦게 도착한 telemetry를 event time으로 분리
-                            </h4>
-                            <p>
-                              실제 측정 시각을 기준으로 최신 상태와 과거 이력을
-                              분리해, 늦은 측정값은 보존하면서도 현재 상태는
-                              되돌리지 않았습니다.
-                            </p>
-                          </div>
-                        </div>
-                        <dl class="case-flow">
-                          <div>
-                            <dt>문제</dt>
-                            <dd>
-                              기존에는 최신 순번보다 작은 telemetry를
-                              OUT_OF_ORDER로 차단해 snapshot 역전은 막았지만,
-                              고유한 과거 측정값도 InfluxDB raw 이력에서
-                              사라졌습니다. 또한 서버 수신 시각을 시계열의
-                              기준으로 사용해 실제 측정 순서와 그래프의 시간이
-                              달라질 수 있었습니다.
-                            </dd>
-                          </div>
-                          <div>
-                            <dt>원인</dt>
-                            <dd>
-                              <code>sequence_no</code>는 한 부팅 세션의 전달
-                              순서는 알려주지만 측정 시각은 설명하지 못합니다.
-                              마지막 순번만 비교해서는 처음 늦게 도착한 이벤트와
-                              같은 이벤트의 재전송도 구분할 수 없었습니다. 이전
-                              Redis 순번 선갱신은 DB transaction이 실패해도
-                              처리됐다고 남을 수 있어, 중복 판정과 실제 저장의
-                              원자성도 보장하지 못했습니다.
-                            </dd>
-                          </div>
-                          <div>
-                            <dt>해결</dt>
-                            <dd>
-                              <figure class="case-context-figure">
-                                <a
-                                  href="assets/airs-telemetry-event-time-classification.webp"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  aria-label="AIRS telemetry 중복·순서 역전 판정 구조 크게 보기"
-                                >
-                                  <img
-                                    src="assets/airs-telemetry-event-time-classification.webp"
-                                    alt="Redis 순번 선갱신 구조와 MySQL transaction에서 current, late, duplicate telemetry를 event time으로 분류하는 구조 비교"
-                                    width="1671"
-                                    height="941"
-                                    loading="lazy"
-                                    decoding="async"
-                                  />
-                                </a>
-                                <figcaption>
-                                  42→44→43으로 도착해도 43은 늦은 raw 이력으로
-                                  보존하고, 최신 snapshot은 44를 유지합니다.
-                                  같은 43의 재전송은 event key로 구분합니다.
-                                </figcaption>
-                              </figure>
-                              MQTT 계약에서
-                              <code>boot_id</code
-                              >·<code>sequence_no</code>·<code>observed_at</code>을
-                              필수로 받고, Spring은 별도로
-                              <code>received_at</code>을 기록합니다. node별
-                              <code>telemetry_ingestion_states</code> 행을 잠근
-                              transaction 안에서 event key와 시각을 비교해
-                              CURRENT·LATE·DUPLICATE로 분류했습니다. CURRENT만
-                              재실·alert를 계산하고 ingestion state와 snapshot을
-                              갱신하며, 고유한 LATE는 현재 상태를 건드리지 않고
-                              raw outbox만 남깁니다. DUPLICATE는 raw·snapshot을
-                              추가하지 않고 마지막 수신 시각만 갱신하며,
-                              InfluxDB의 <code>_time</code>에는
-                              <code>observed_at</code>을 사용했습니다.
-                            </dd>
-                          </div>
-                          <div>
-                            <dt>결과</dt>
-                            <dd>
-                              테스트에서 42→44→43 순서의 고유 telemetry 세 건이
-                              모두 raw outbox에 남고, 43은 LATE로 처리돼 최신
-                              ingestion state·snapshot·재실 상태가 44에서
-                              유지됨을 확인했습니다. 같은 43을 다시 보내도
-                              outbox가 늘지 않았고, InfluxDB writer는
-                              <code>observed_at</code>을 point 시각으로
-                              사용했습니다. 다만 실제 펌웨어·운영 broker·실제
-                              InfluxDB 적재까지 검증한 결과는 아니며, 완료
-                              outbox 보관 기간이 지난 중복과 늦은 raw의 기존
-                              rollup 재반영 정책은 남은 한계입니다.
-                            </dd>
-                          </div>
-                        </dl>
-                      </article>
-
-                      <article class="case-card">
-                        <div class="case-header">
-                          <span class="case-number">05</span>
-                          <div>
                             <h4>MQTT ACK와 저장 사이의 유실 경계 보완</h4>
                             <p>
                               MySQL에 최신 상태와 InfluxDB 전달 작업을 먼저
@@ -1152,13 +1163,13 @@
                             <dd>
                               <figure class="case-context-figure">
                                 <a
-                                  href="assets/airs-mqtt-delivery-reliability.webp"
+                                  href="assets/4_Side%20Project/AIRS/airs-mqtt-delivery-reliability.webp"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   aria-label="AIRS MQTT ACK와 저장 경계 변경 전후 구조 크게 보기"
                                 >
                                   <img
-                                    src="assets/airs-mqtt-delivery-reliability.webp"
+                                    src="assets/4_Side%20Project/AIRS/airs-mqtt-delivery-reliability.webp"
                                     alt="MQTT ACK가 저장보다 앞선 기존 구조와 MySQL commit 후 ACK하고 outbox로 InfluxDB 전달을 재시도하는 구조 비교"
                                     width="1672"
                                     height="941"
@@ -1324,79 +1335,161 @@ outbox → InfluxDB blocking write</pre
       </section>
 
       <section
-        class="section experience-section"
-        id="experience"
-        aria-labelledby="experience-title"
+        class="section toy-section"
+        id="toy-projects"
+        aria-labelledby="toy-projects-title"
       >
         <div class="content-shell">
-          <p class="section-label">Experience</p>
-          <h2 id="experience-title" class="visually-hidden">Experience</h2>
-          <ul class="experience-list" role="list">
-            <li class="experience-row">
-              <div class="experience-period">
-                <time datetime="2026-03">2026.03</time>–<time datetime="2026-12"
-                  >2026.12</time
-                >
+          <div class="section-heading">
+            <div class="section-heading-copy">
+              <p class="section-label">Toy Project</p>
+              <p class="section-note">
+                - 학습과 협업 과정에서 만들어 본 작은 프로그램을 모았습니다.
+              </p>
+            </div>
+            <button
+              class="project-toggle toy-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="toy-project-list"
+              data-toy-toggle
+            >
+              <span data-toggle-label>상세 내용 펼치기</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="m6.7 8.7 5.3 5.3 5.3-5.3 1.4 1.4-6.7 6.7-6.7-6.7 1.4-1.4Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <h2 id="toy-projects-title" class="visually-hidden">Toy Project</h2>
+          <div class="toy-grid" id="toy-project-list">
+            <article class="toy-card" aria-labelledby="custom-maze-title">
+              <figure class="toy-cover">
+                <img
+                  src="assets/5_Toy%20Project/Custom%20Maze/Custom%20Maze.png"
+                  alt="Custom Maze 이미지"
+                  width="246"
+                  height="224"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="toy-summary">
+                <div class="toy-heading">
+                  <h3 id="custom-maze-title">Custom Maze</h3>
+                  <time datetime="2024-12">2024.12</time>
+                </div>
+                <p>
+                  미로 탐색 프로그램에 장애물 추가·삭제와 출발·도착점 변경
+                  기능을 더했습니다. 조건을 바꾸면 선택한 경로를 다시 탐색하고,
+                  결과를 화면에 표시하도록 구현했습니다.
+                </p>
+                <ul class="toy-tech" aria-label="사용 기술">
+                  <li>C++</li>
+                </ul>
+                <div class="toy-links">
+                  <a
+                    href="https://github.com/Jhoae/custom-maze"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  >
+                </div>
               </div>
-              <article
-                class="experience-content"
-                aria-labelledby="release-title"
-              >
-                <p class="experience-category">교내 프로젝트 학회</p>
-                <h3 id="release-title">Release</h3>
-                <p class="experience-affiliation">서강대학교 프로젝트 학회</p>
-                <p class="experience-description">
-                  팀 프로젝트에 관심 있는 학우들과 교류하기 위해 활동했습니다.
-                  학회원들과 스터디를 하며 CS와 전공 공부를 함께했고, 팀
-                  프로젝트에서는 모바일·하드웨어 등 서로 다른 파트의 팀원들과
-                  하나의 서비스를 만들었습니다.
+            </article>
+
+            <article class="toy-card" aria-labelledby="tetris-title">
+              <figure class="toy-cover">
+                <img
+                  src="assets/5_Toy%20Project/Tetris/Tetris.png"
+                  alt="테트리스 이미지"
+                  width="242"
+                  height="170"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="toy-summary">
+                <div class="toy-heading">
+                  <h3 id="tetris-title">테트리스</h3>
+                  <time datetime="2024-10">2024.10</time>
+                </div>
+                <p>
+                  터미널 기반 테트리스에 점수를 저장하고 순위를 조회하는 기능을
+                  추가했습니다. 블록의 배치 위치를 추천하고, 추천에 따라
+                  자동으로 게임을 진행하는 기능도 구현했습니다.
                 </p>
-              </article>
-            </li>
-            <li class="experience-row">
-              <div class="experience-period">
-                <time datetime="2022-09">2022.09</time>–<time datetime="2022-11"
-                  >2022.11</time
-                >
+                <ul class="toy-tech" aria-label="사용 기술">
+                  <li>C</li>
+                </ul>
+                <div class="toy-links">
+                  <a
+                    href="https://github.com/Jhoae/tetris"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  >
+                </div>
               </div>
-              <article
-                class="experience-content"
-                aria-labelledby="timetable-title"
-              >
-                <p class="experience-category">교외 프로젝트 팀</p>
-                <h3 id="timetable-title">TimetableHelper — 시간표 도우미</h3>
-                <p class="experience-affiliation">홍익대학교 졸업 프로젝트</p>
-                <p class="experience-description">
-                  외부 개발 팀원으로 참여해 Figma 디자인을 바탕으로 웹 화면
-                  개발을 전담했습니다. 강의 선택과 시간표 편집 기능을 구현하고,
-                  시간표 이미지를 공유하며 ‘좋아요’를 누를 수 있는 커뮤니티
-                  화면도 개발했습니다. 완성한 결과물은 졸업 발표에서
-                  소개되었습니다.
-                </p>
-              </article>
-            </li>
-            <li class="experience-row">
-              <div class="experience-period">
-                <time datetime="2022-06">2022.06</time>–<time datetime="2022-09"
-                  >2022.09</time
+            </article>
+
+            <article class="toy-card" aria-labelledby="timetable-toy-title">
+              <figure class="toy-preview">
+                <a
+                  class="toy-cover"
+                  href="assets/5_Toy%20Project/TimetableHelper/timetable-demo.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TimetableHelper 실행 화면 크게 보기 (새 탭)"
                 >
+                  <img
+                    src="assets/5_Toy%20Project/TimetableHelper/timetable-demo.png"
+                    alt="TimetableHelper 공개 데모에서 다섯 강의를 배치한 주간 시간표와 강의 선택 목록"
+                    width="612"
+                    height="505"
+                    loading="lazy"
+                  />
+                </a>
+              </figure>
+              <div class="toy-summary">
+                <div class="toy-heading toy-heading-compact">
+                  <h3 id="timetable-toy-title">
+                    TimetableHelper — 시간표 도우미
+                  </h3>
+                  <time datetime="2022-09">2022.09–2022.11</time>
+                </div>
+                <p>
+                  홍익대학교 학생들의 졸업 프로젝트에 외부 팀원으로 참여해 Figma
+                  디자인을 바탕으로 시간표 도우미의 프론트엔드를 개발했습니다.
+                  강의 선택과 시간표 편집, 겹치는 강의의 교체 안내, 브라우저 내
+                  시간표 저장 기능을 구현했습니다.
+                </p>
+                <ul class="toy-tech" aria-label="사용 기술">
+                  <li>JavaScript</li>
+                  <li>React</li>
+                </ul>
+                <div class="toy-links">
+                  <a
+                    href="https://fantastic-mochi-397dd5.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >URL</a
+                  >
+                  <a
+                    href="https://github.com/TimetableHelper/TimetableHelper-front"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub ↗</a
+                  >
+                  <a
+                    href="https://www.figma.com/design/mgJ3ooKhcmzZOFcWlQyAvG/SIDO?node-id=0-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Figma ↗</a
+                  >
+                </div>
               </div>
-              <article class="experience-content" aria-labelledby="kcook-title">
-                <p class="experience-category">학생 창업팀</p>
-                <h3 id="kcook-title">K.Cook — 커스텀 케이크 주문 플랫폼</h3>
-                <p class="experience-affiliation">
-                  숭실대학교 학생 창업팀 K.Cook
-                </p>
-                <p class="experience-description">
-                  숭실대학교 학생 창업팀 K.Cook의 커스텀 케이크 주문 플랫폼
-                  개발에 프론트엔드로 참여했습니다. 사용자가 가게를 찾는 화면과
-                  판매자가 케이크 이미지·옵션을 다루는 화면을 맡았습니다.
-                  구매자와 판매자 양쪽의 화면을 구현하며, 서로 다른 이용 목적에
-                  맞춰 화면을 구성하는 경험을 했습니다.
-                </p>
-              </article>
-            </li>
-          </ul>
+            </article>
+          </div>
         </div>
       </section>
 
