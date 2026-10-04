@@ -118,7 +118,7 @@ toyToggle?.addEventListener("click", () => {
   setToyProjects(toyToggle.getAttribute("aria-expanded") !== "true");
 });
 
-setToyProjects(false);
+setToyProjects(true);
 
 techIcons.forEach((icon) => {
   const hideUnavailableIcon = () => {
